@@ -2,6 +2,10 @@ import React from 'react';
 
 function Nav() {
 
+    function categorySelected() {
+        console.log(`${name} clicked`)
+    }
+
     const categories = [
         {
             name: "commercial",
@@ -38,7 +42,7 @@ function Nav() {
                             className="mx-1"
                             key={category.name}
                         >
-                            <span>
+                            <span onClick={categorySelected} >
                                 {category.name}
                             </span>
                         </li>
