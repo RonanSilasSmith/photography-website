@@ -2,7 +2,7 @@ import React from 'react';
 
 function Nav() {
 
-    function categorySelected() {
+    function categorySelected(name) {
         console.log(`${name} clicked`)
     }
 
@@ -42,7 +42,7 @@ function Nav() {
                             className="mx-1"
                             key={category.name}
                         >
-                            <span onClick={categorySelected} >
+                            <span onClick={() => categorySelected(category.name)} >
                                 {category.name}
                             </span>
                         </li>
